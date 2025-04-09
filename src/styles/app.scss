@@ -1,6 +1,10 @@
 @import 'utils/variables';
 @import 'components/type';
 
+body {
+    margin: 27px
+}
+
 #searchBar {
     width: 300px;
     padding: 10px;
@@ -9,55 +13,39 @@
     border-radius: 6px;
     outline: none;
     transition: border 0.3s;
-  }
-  
-  #searchBar:focus {
+}
+
+#searchBar:focus {
     border-color: #007bff;
-  }
-  
-  /* Suggestions */
-  #suggestions {
-    position: absolute;
-    background-color: #fff;
-    width: 300px;
-    border: 1px solid #ccc;
-    border-top: none;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    max-height: 200px;
-    overflow-y: auto;
-    z-index: 1000;
-    border-radius: 0 0 6px 6px;
-  }
-  
-  /* Une suggestion */
-  .suggestion {
-    padding: 10px 12px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .suggestion:last-child {
-    border-bottom: none;
-  }
-  
-  .suggestion:hover {
-    background-color: #f0f0f0;
-  }
-  
-  /* Résultat film */
-  #result {
+}
+
+/* Résultat film */
+#result {
     margin-top: 30px;
-    max-width: 600px;
+    width: 90%;
     padding: 20px;
     background: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.05);
-  }
-  
-  #result img {
+}
+
+#result img {
     max-width: 100%;
     border-radius: 8px;
     margin-top: 10px;
-  }
+}
+
+#result p {
+    max-width: 680px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hidden {
+    display: none;
+}
