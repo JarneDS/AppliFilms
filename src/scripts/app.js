@@ -17,7 +17,6 @@ searchBar.addEventListener("input", async () => {
     const data = await res.json();
 
     if (data.results && data.results.length > 0) {
-      document.getElementById("result").classList.remove("hidden");
       afficherFilms(data.results);
     } else {
       resultBox.innerHTML = "<p>Film non trouvé.</p>";
